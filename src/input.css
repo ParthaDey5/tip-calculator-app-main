@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global outline for debugging */
+* {
+  /* outline: 1px solid red; */
+}
+
+
+:root{
+    --color-Green-900:hsl(183, 100%, 15%);
+    --color-Green-150:hsl(172, 67%, 70%);
+    --color-Green-100:hsl(172, 67%, 75%);
+    --color-Green-400:hsl(172, 67%, 45%);
+    --color-Grey-500: hsl(186, 14%, 43%); 
+    --color-Grey-400:hsl(184, 14%, 56%); 
+    --color-Grey-200:hsl(185, 41%, 84%);
+    --color-Grey-50:hsl(189, 47%, 97%);
+    --color-White: hsl(0, 0%, 100%);
+   
+}
+
+html{
+    @apply text-[1.25vw];
+    font-family: 'Space Mono', sans-serif;
+}
+body{
+    @apply relative col-x-center max-w-full w-screen min-h-screen lg:pt-[9rem] pt-[10rem] lg:aspect-[1440/1024] aspect-[375/933] lg:text-[0.875rem] text-[3.334rem] font-bold text-shadow-xs ;
+    
+}
+button{
+    @apply cursor-custom;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none ;
+    margin: 0 ;
+    
+}
+
+input[type="number"] {
+    -moz-appearance: textfield ;
+}
+
+input{
+    @apply w-full lg:px-[1rem] px-[3.5rem] lg:py-[0.2rem] py-[1rem] rounded-[0.5rem] bg-[var(--color-Grey-0)] placeholder:text-[var(--color-Grey-0)] text-right lg:text-[1.235rem] text-[5.235rem] lg:placeholder:text-[1.235rem] placeholder:text-[5.235rem] placeholder:text-[var(--color-Grey-200)] cursor-custom  placeholder:text-shadow-xs bg-[var(--color-Grey-50)] ;
+}
+/* ===== COMPONENT STYLES ===== */
+
+/* Main container */
+.Tip-calculator__section__main {
+    @apply lg:w-[51rem] w-full aspect-[1440/755] lg:row-x-between lg:row-y-start col-x-center lg:rounded-[1.5rem] rounded-[6rem] lg:mt-[5rem] mt-[9rem] lg:pl-[2.6rem] lg:pr-[1.8rem] px-[5rem] bg-[var(--color-White)];
+}
+
+/* Input sections */
+.Tip-calculator__section {
+    @apply col-x-start lg:gap-y-[2.4rem] gap-y-[7rem] lg:w-[45%] w-full lg:mt-[2.5rem] mt-[7rem] lg:px-0 px-[2rem];
+}
+
+.Tip-calculator__section__bill {
+    @apply w-full col-x-start lg:gap-y-[0.5rem] gap-y-[1.3rem];
+}
+
+.Tip-calculator__section__tip {
+    @apply w-full col-x-start lg:gap-y-[1rem] gap-y-[4rem];
+}
+
+.Tip-calculator__section__people {
+    @apply w-full col-x-start lg:mt-0 -mt-[3rem] lg:gap-y-[0.5rem] gap-y-[1.5rem] relative;
+}
+
+/* Result section */
+.Tip-calculator__result {
+    @apply lg:w-[49%] w-full lg:h-[23.5rem] lg:rounded-[1.2rem] rounded-[5rem] col-x-center col-y-start lg:gap-y-0 gap-y-[5rem] lg:px-[2.1rem] px-[5.5rem] lg:mt-[1.65rem] mt-[6.6rem] bg-[var(--color-Grey-500)];
+}
+
+.Tip-calculator__result__tip {
+    @apply w-full row-x-between row-y-center lg:mt-[3rem] mt-[8.5rem] lg:mb-[2.6rem];
+}
+
+.Tip-calculator__result__total {
+    @apply w-full row-x-between row-y-center;
+}
+
+/* Reset button */
+.Tip-calculator__reset {
+    @apply w-full lg:py-[0.5rem] py-[2.2rem] lg:rounded-[0.3rem] rounded-[1rem] lg:mt-[7rem] mt-[3rem] mb-[5rem] lg:text-[1rem] text-[4rem] bg-[var(--color-Green-400)] hover:bg-[var(--color-Green-100)] transition-colors duration-300 ease-in;
+}
+
+/* ===== ELEMENT STYLES ===== */
+
+/* Typography */
+.Tip-calculator__logo {
+    @apply lg:w-[4.8rem] w-[19rem];
+}
+
+.Tip-calculator__section__title {
+    @apply text-[var(--color-Grey-900)] lg:text-[0.875rem] text-[3.3rem];
+}
+
+.Tip-calculator__section__people__title {
+    @apply text-[var(--color-Grey-900)] lg:text-[0.875rem] text-[2.625rem];
+}
+
+.Tip-calculator__result__tip__title__header {
+    @apply whitespace-nowrap text-[var(--color-White)] lg:text-[0.875rem] text-[3.3rem];
+}
+
+.Tip-calculator__result__tip__title__paragraph {
+    @apply w-fit text-[var(--color-Grey-400)];
+}
+
+.Tip-calculator__result__total__header {
+    @apply text-[var(--color-White)] lg:text-[0.875rem] text-[3.3rem];
+}
+
+.Tip-calculator__result__tip__total__paragraph {
+    @apply text-[var(--color-Grey-400)] lg:text-[0.875rem] text-[2.625rem];
+}
+
+/* Input fields */
+input {
+    @apply w-full lg:px-[1rem] px-[3.5rem] lg:py-[0.2rem] py-[1rem] rounded-[0.5rem] bg-[var(--color-Grey-0)] placeholder:text-[var(--color-Grey-0)] text-right lg:text-[1.235rem] text-[5.235rem] lg:placeholder:text-[1.235rem] placeholder:text-[5.235rem] placeholder:text-[var(--color-Grey-200)] cursor-custom placeholder:text-shadow-xs bg-[var(--color-Grey-50)];
+}
+
+.Tip-calculator__section__bill__input {
+    @apply bg-[url(../images/icon-dollar.svg)] lg:bg-[length:0.6rem_1rem] bg-[length:2rem_4rem] bg-no-repeat bg-left lg:bg-[position:1rem_0.5rem] bg-[position:4rem_3rem];
+}
+
+.Tip-calculator__section__people__input {
+    @apply bg-[url(../images/icon-person.svg)] lg:bg-[length:0.8rem_1rem] bg-[length:3rem_4rem] bg-no-repeat bg-left lg:bg-[position:1rem_0.6rem] bg-[position:3.5rem_3rem];
+}
+
+/* Tip buttons */
+.Tip-calculator__tip__buttons {
+    @apply grid w-full lg:grid-cols-3 grid-cols-2 lg:gap-[0.9rem] gap-[4rem];
+}
+
+.Tip-calculator__section__tip__button {
+    @apply lg:w-[6.5rem] lg:py-[0.35rem] py-[2.35rem] bg-[var(--color-Green-900)] text-[var(--color-White)] lg:rounded-[0.3rem] rounded-[1.3rem] lg:text-[1.235rem] text-[4.375rem] hover:bg-[var(--color-Green-150)] transition-colors duration-300 ease-in;
+}
+
+.Tip-calculator__section__tip__button.selected {
+    @apply bg-[var(--color-Green-400)] text-[var(--color-Grey-900)];
+}
+
+.Tip-calculator__section__tip__button.custom {
+    @apply bg-[var(--color-Grey-50)] text-[var(--color-Grey-900)] placeholder:text-[var(--color-Grey-900)] lg:text-[1.235rem] text-[4.375rem] text-center ;
+}
+
+.Tip-calculator__section__tip__button.custom:focus {
+    @apply outline-2 outline-[var(--color-Green-400)];
+}
+
+.Tip-calculator__section__tip__button.custom:focus::placeholder {
+    color: transparent;
+}
+
+/* Result displays */
+.Tip-calculator__result__tip__input {
+    @apply lg:text-[2.625rem] leading-none lg:text-[2.875rem] text-[7rem] tracking-tighter text-[var(--color-Green-400)];
+}
+
+.Tip-calculator__result__total__input {
+    @apply lg:text-[2.625rem] leading-none lg:text-[2.875rem] text-[7rem] tracking-tighter text-[var(--color-Green-400)];
+}
+
+/* Error message */
+.Tip-calculator__section__people__error {
+    @apply text-red-500 absolute right-0 ;
+}
+
+/* Responsive adjustments */
+.Tip-calculator__section__bill__input,
+.Tip-calculator__section__people__input {
+    @apply lg:rounded-[0.3rem] rounded-[1rem];
+}
+.Tip-calculator__section__bill__input, .Tip-calculator__section__people__input {
+    @apply lg:rounded-[0.3rem] rounded-[1rem];
+}

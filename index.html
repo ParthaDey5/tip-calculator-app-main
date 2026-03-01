@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="/src/output.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    
+    <header>
+      <img
+        src="/images/logo.svg"
+        alt="logo"
+        class="Tip-calculator__logo lg:w-[4.8rem] w-[19rem]"
+      />
+    </header>
+
+    <main
+      class="Tip-calculator__section__main "
+    >
+      <section
+        class="Tip-calculator__section "
+      >
+        <div
+          class="Tip-calculator__section__bill"
+        >
+          <h1 class="Tip-calculator__section__title">Bill</h1>
+          <input
+            type="number"
+            class="Tip-calculator__section__bill__input"
+            placeholder="0"
+            min="0"
+            step="0.01"
+            inputmode="decimal"
+          />
+        </div>
+
+        <div
+          class="Tip-calculator__section__tip "
+        >
+          <h1 class="Tip-calculator__section__title">Select Tip %</h1>
+
+          <div
+            class="Tip-calculator__tip__buttons"
+          >
+            <button class="Tip-calculator__section__tip__button">5%</button>
+            <button class="Tip-calculator__section__tip__button">10%</button>
+            <button class="Tip-calculator__section__tip__button selected">
+              15%
+            </button>
+            <button class="Tip-calculator__section__tip__button">25%</button>
+            <button class="Tip-calculator__section__tip__button">50%</button>
+            <input
+              type="number"
+              class="Tip-calculator__section__tip__button custom"
+              placeholder="Custom"
+              min="0"
+              max="100"
+            />
+          </div>
+        </div>
+
+        <div
+          class="Tip-calculator__section__people"
+        >
+          <h1 class="Tip-calculator__section__people__title">
+            Number of People
+          </h1>
+          <input
+            type="number"
+            class="Tip-calculator__section__people__input"
+            placeholder="0"
+          />
+          <p class="Tip-calculator__section__people__error hidden">
+            Can't be zero
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="Tip-calculator__result"
+      >
+        <div
+          class="Tip-calculator__result__tip w-full row-x-between row-y-center lg:mt-[3rem] mt-[8.5rem] lg:mb-[2.6rem]"
+        >
+          <span class="Tip-calculator__result__tip__title">
+            <h1 class="Tip-calculator__result__tip__title__header">
+              Tip Amount
+            </h1>
+            <p class="Tip-calculator__result__tip__title__paragraph">
+              / person
+            </p>
+          </span>
+          <p class="Tip-calculator__result__tip__input">
+            $0.00
+          </p>
+        </div>
+        <div class="Tip-calculator__result__total">
+          <span class="Tip-calculator__result__tip__title">
+            <h1 class="Tip-calculator__result__total__header">
+              Total
+            </h1>
+            <p class="Tip-calculator__result__tip__total__paragraph">
+              / person
+            </p>
+          </span>
+          <p class="Tip-calculator__result__total__input">
+            $0.00
+          </p>
+        </div>
+
+        <button class="Tip-calculator__reset">
+          RESET
+        </button>
+      </section>
+    </main>
+
+    <script>
+      const elements = {
+        billInput: document.querySelector(
+          ".Tip-calculator__section__bill__input"
+        ),
+        tipButtons: document.querySelectorAll(
+          ".Tip-calculator__section__tip__button"
+        ),
+        tipButtonsArray: Array.from(
+          document.querySelectorAll(".Tip-calculator__section__tip__button")
+        ),
+        peopleInput: document.querySelector(
+          ".Tip-calculator__section__people__input"
+        ),
+        tipAmount: document.querySelector(
+          ".Tip-calculator__result__tip__input"
+        ),
+        totalAmount: document.querySelector(
+          ".Tip-calculator__result__total__input"
+        ),
+        resetButton: document.querySelector(".Tip-calculator__reset"),
+        errorPeople: document.querySelector(
+          ".Tip-calculator__section__people__error"
+        )
+      };
+      // Store selected tip percentage
+      let selectedTipPercent = 0.15; // Default to first button (15%)
+
+      // Calculate function
+      function calculate() {
+        const bill = parseFloat(elements.billInput.value) || 0;
+        const peopleValue = elements.peopleInput.value;
+        const people = parseFloat(peopleValue) || 0;
+
+        // Check error BEFORE calculation
+        if (parseFloat(peopleValue) <= 0) {
+          elements.errorPeople.classList.remove("hidden");
+          return; // Stop calculation
+        }
+
+        elements.errorPeople.classList.add("hidden");
+
+        const tipAmount = (bill * selectedTipPercent) / people;
+        const totalAmount = (bill * (1 + selectedTipPercent)) / people;
+
+        elements.tipAmount.textContent = !isFinite(tipAmount)
+          ? "$0.00"
+          : `$${tipAmount.toFixed(2)}`;
+
+          elements.totalAmount.textContent = !isFinite(totalAmount)
+          ? "$0.00"
+          : `$${totalAmount.toFixed(2)}`;
+
+          
+      }
+
+
+      
+
+      // Event listeners to recalculate when inputs change
+      elements.billInput.addEventListener("input", calculate);
+      elements.peopleInput.addEventListener("input", calculate);
+
+      // Tip button clicks
+      elements.tipButtonsArray.forEach((element) => {
+        element.addEventListener("click", (e) => {
+          elements.tipButtons.forEach((btn) => {
+            btn.classList.remove("selected");
+          });
+
+          if (e.target.classList.contains("custom")) {
+            e.target.classList.add("selected");
+          } else {
+            e.target.classList.add("selected");
+            selectedTipPercent = parseFloat(e.target.textContent) / 100;
+            calculate();
+          }
+        });
+
+        if (element.classList.contains("custom")) {
+          element.addEventListener("input", (e) => {
+            const customValue = e.target.value;
+            selectedTipPercent = customValue / 100;
+            calculate();
+          });
+        }
+      });
+
+      elements.resetButton.addEventListener("click", () => {
+        elements.billInput.value = "";
+        elements.peopleInput.value = "";
+        elements.tipAmount.textContent = "$0.00";
+        elements.totalAmount.textContent = "$0.00";
+        elements.errorPeople.classList.add("hidden");
+        document.querySelector(".custom").value = "";
+        document.querySelector(".custom").classList.remove("selected");
+      })
+    </script>
+  </body>
+</html>

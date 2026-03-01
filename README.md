@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/ParthaDey5/tip-calculator-app-main]
-- Live Site URL: [Add live site URL here]
+- Live Site URL: [https://tip-calculator-app-main-38hm.vercel.app]
 
 ## My process
 
@@ -146,8 +146,8 @@ I worked with AI coding assistants during this project to enhance my learning ex
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Website - [Partha Dey](https://portfolio-delta-ten-55.vercel.app)
+- Frontend Mentor - [https://www.frontendmentor.io/profile/ParthaDey5]
 - Twitter - [@yourusername](https://www.twitter.com/yourusername)
 
 ## Acknowledgments

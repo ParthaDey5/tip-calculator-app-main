@@ -50,7 +50,7 @@ input{
 
 /* Main container */
 .Tip-calculator__section__main {
-    @apply lg:w-[51rem] w-full aspect-[1440/755] lg:row-x-between lg:row-y-start col-x-center lg:rounded-[1.5rem] rounded-[6rem] lg:mt-[5rem] mt-[9rem] lg:pl-[2.6rem] lg:pr-[1.8rem] px-[5rem] bg-[var(--color-White)] shadow-5xl ;
+    @apply lg:w-[51rem] w-full lg:aspect-[1440/755] lg:row-x-between lg:row-y-start col-x-center lg:rounded-[1.5rem] rounded-t-[6rem] rounded-b-none lg:mt-[5rem] mt-[9rem] lg:pl-[2.6rem] lg:pr-[1.8rem] px-[5rem] bg-[var(--color-White)] shadow-5xl lg:flex-grow-0  flex-grow ;
 }
 
 /* Input sections */
@@ -72,7 +72,7 @@ input{
 
 /* Result section */
 .Tip-calculator__result {
-    @apply lg:w-[49%] w-full lg:h-[23.5rem] lg:rounded-[1.2rem] rounded-[5rem] col-x-center col-y-start lg:gap-y-0 gap-y-[5rem] lg:px-[2.1rem] px-[5.5rem] lg:mt-[1.65rem] mt-[6.6rem] bg-[var(--color-Grey-500)];
+    @apply lg:w-[49%] w-full lg:h-[23.5rem] lg:rounded-[1.2rem] rounded-[5rem] col-x-center col-y-start lg:gap-y-0 gap-y-[5rem] lg:px-[2.1rem] px-[5.5rem] lg:mt-[1.65rem] mt-[6.6rem] bg-[var(--color-Grey-500)]  ;
 }
 
 .Tip-calculator__result__tip {
@@ -108,7 +108,7 @@ input{
 }
 
 .Tip-calculator__result__tip__title__paragraph {
-    @apply w-fit text-[var(--color-Grey-400)];
+    @apply w-fit text-[var(--color-Grey-400)] whitespace-nowrap ;
 }
 
 .Tip-calculator__result__total__header {
@@ -116,12 +116,12 @@ input{
 }
 
 .Tip-calculator__result__tip__total__paragraph {
-    @apply text-[var(--color-Grey-400)] lg:text-[0.875rem] text-[2.625rem];
+    @apply text-[var(--color-Grey-400)] lg:text-[0.875rem] text-[2.625rem] whitespace-nowrap ;
 }
 
 /* Input fields */
 input {
-    @apply w-full lg:px-[1rem] px-[3.5rem] lg:py-[0.2rem] py-[1rem] rounded-[0.5rem] bg-[var(--color-Grey-0)] placeholder:text-[var(--color-Grey-0)] text-right lg:text-[1.235rem] text-[5.235rem] lg:placeholder:text-[1.235rem] placeholder:text-[5.235rem] placeholder:text-[var(--color-Grey-200)] cursor-custom placeholder:text-shadow-xs bg-[var(--color-Grey-50)];
+    @apply w-full lg:pr-[1rem] lg:pl-[2rem] px-[3.5rem] lg:py-[0.2rem] py-[1rem] rounded-[0.5rem] bg-[var(--color-Grey-0)] placeholder:text-[var(--color-Grey-0)] text-right lg:text-[1.235rem] text-[5.235rem] lg:placeholder:text-[1.235rem] placeholder:text-[5.235rem] placeholder:text-[var(--color-Grey-200)] cursor-custom placeholder:text-shadow-xs bg-[var(--color-Grey-50)];
 }
 
 .Tip-calculator__section__bill__input {
@@ -161,13 +161,10 @@ input {
 }
 
 /* Result displays */
-.Tip-calculator__result__tip__input {
-    @apply lg:text-[2.625rem] leading-none lg:text-[2.875rem] text-[7rem] tracking-tighter text-[var(--color-Green-400)];
+.Tip-calculator__result__tip__input, .Tip-calculator__result__total__input {
+    @apply lg:text-[2.625rem] leading-none lg:text-[2.75rem] text-[7rem] tracking-tighter text-[var(--color-Green-400)] overflow-hidden;
 }
 
-.Tip-calculator__result__total__input {
-    @apply lg:text-[2.625rem] leading-none lg:text-[2.875rem] text-[7rem] tracking-tighter text-[var(--color-Green-400)];
-}
 
 /* Error message */
 .Tip-calculator__section__people__error {

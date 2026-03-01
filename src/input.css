@@ -131,6 +131,9 @@ input {
 .Tip-calculator__section__people__input {
     @apply bg-[url(../images/icon-person.svg)] lg:bg-[length:0.8rem_1rem] bg-[length:3rem_4rem] bg-no-repeat bg-left lg:bg-[position:1rem_0.6rem] bg-[position:3.5rem_3rem];
 }
+.Tip-calculator__section__people__input.error{
+    @apply outline-2 outline-red-500;
+}
 
 /* Tip buttons */
 .Tip-calculator__tip__buttons {

@@ -1038,6 +1038,11 @@ input::placeholder {
   }
 }
 
+.Tip-calculator__section__people__input.error {
+  outline-width: 2px;
+  outline-color: #ef4444;
+}
+
 /* Tip buttons */
 
 .Tip-calculator__tip__buttons {

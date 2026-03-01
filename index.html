@@ -163,9 +163,11 @@
         // Check error BEFORE calculation
         if (parseFloat(peopleValue) <= 0) {
           elements.errorPeople.classList.remove("hidden");
+          elements.peopleInput.classList.add("error");
           return; // Stop calculation
         }
-
+        
+        elements.peopleInput.classList.remove("error");
         elements.errorPeople.classList.add("hidden");
 
         const tipAmount = (bill * selectedTipPercent) / people;

@@ -147,7 +147,7 @@ I worked with AI coding assistants during this project to enhance my learning ex
 ## Author
 
 - Website - [Partha Dey](https://portfolio-delta-ten-55.vercel.app)
-- Frontend Mentor - [https://www.frontendmentor.io/profile/ParthaDey5]
+- Frontend Mentor - [@ParthaDey5](https://www.frontendmentor.io/profile/ParthaDey5)
 - Twitter - [@yourusername](https://www.twitter.com/yourusername)
 
 ## Acknowledgments

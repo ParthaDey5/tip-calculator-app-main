@@ -1,104 +1,160 @@
-# Frontend Mentor - Tip calculator app
+# Frontend Mentor - Tip calculator app solution
 
-![Design preview for the Tip calculator app coding challenge](./preview.jpg)
+This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+  - [AI Collaboration](#ai-collaboration)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+### The challenge
 
-## The challenge
-
-Your challenge is to build out this tip calculator app and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout for the app depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Calculate the correct tip and total cost of the bill per person
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+![](./screenshot.png)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### Links
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+- Solution URL: [https://github.com/ParthaDey5/tip-calculator-app-main]
+- Live Site URL: [Add live site URL here]
 
-If you would like the Figma design file to gain experience using professional tools and build more accurate projects faster, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+## My process
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+### Built with
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- Semantic HTML5 markup
+- CSS custom properties
+- Tailwind CSS
+- Mobile-first workflow
+- BEM CSS methodology
+- JavaScript (ES6+)
+- Responsive design
 
-## Using AI coding assistants
+### What I learned
 
-We've included two files to help you if you're using AI coding assistants (like Claude, GitHub Copilot, Cursor, etc.) while working on this challenge:
+This project was a great opportunity to practice several key concepts:
 
-- `AGENTS.md` - Contains detailed instructions for AI assistants on how to help you with this challenge. It's tailored to this challenge's difficulty level, so the AI will provide guidance appropriate to your learning stage—offering more support for beginner challenges and encouraging more independence on advanced ones.
-- `CLAUDE.md` - A pointer file that directs Claude-based tools to the AGENTS.md instructions.
+**CSS Architecture:**
+- Implemented BEM (Block Element Modifier) methodology for clean, maintainable CSS
+- Separated concerns by moving all Tailwind utility classes from HTML to CSS file
+- Organized CSS into logical components for better maintainability
 
-**How to use them:** You don't need to do anything! These files are automatically detected by most AI coding tools. The AI will read them and adjust its behavior to be a better learning partner—guiding you toward solutions rather than just giving you the answers.
+**JavaScript Functionality:**
+- Built dynamic tip calculation with real-time updates
+- Implemented form validation for edge cases (division by zero, invalid inputs)
+- Handled custom tip input alongside preset percentage buttons
+- Used event listeners for seamless user interaction
 
-**Note:** These files are designed to help you *learn*, not to do the work for you. The AI is instructed to ask questions, give hints, and explain concepts rather than writing complete solutions.
+**Responsive Design:**
+- Created mobile-first responsive layouts using Tailwind CSS
+- Implemented proper spacing and sizing for different screen sizes
+- Ensured consistent user experience across devices
 
-## Building your project
+**Code Examples:**
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+```javascript
+// Dynamic calculation with validation
+function calculate() {
+  const bill = parseFloat(elements.billInput.value) || 0;
+  const peopleValue = elements.peopleInput.value;
+  const people = parseFloat(peopleValue) || 0;
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+  // Validate input before calculation
+  if (peopleValue === "" || parseFloat(peopleValue) <= 0) {
+    elements.errorPeople.classList.remove("hidden");
+    return;
+  }
+  elements.errorPeople.classList.add("hidden");
 
-## Deploying your project
+  const tipAmount = (bill * selectedTipPercent) / people;
+  const totalAmount = (bill * (1 + selectedTipPercent)) / people;
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+  // Handle edge cases
+  elements.tipAmount.textContent = !isFinite(tipAmount)
+    ? "$0.00"
+    : `$${tipAmount.toFixed(2)}`;
+  elements.totalAmount.textContent = !isFinite(totalAmount)
+    ? "$0.00"
+    : `$${totalAmount.toFixed(2)}`;
+}
+```
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+```css
+/* Organized component-based CSS */
+.Tip-calculator__section__main {
+    @apply lg:w-[51rem] w-full aspect-[1440/755] lg:row-x-between lg:row-y-start col-x-center lg:rounded-[1.5rem] rounded-[6rem] lg:mt-[5rem] mt-[9rem] lg:pl-[2.6rem] lg:pr-[1.8rem] px-[5rem] bg-[var(--color-White)] shadow-5xl;
+}
+```
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+### Continued development
 
-## Create a custom `README.md`
+Areas I want to focus on in future projects:
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+- **Advanced CSS Techniques:** Explore more complex animations and transitions
+- **JavaScript Patterns:** Implement more sophisticated state management patterns
+- **Accessibility:** Deepen understanding of ARIA attributes and keyboard navigation
+- **Performance:** Optimize CSS and JavaScript for better loading times
+- **Testing:** Add unit tests for JavaScript functionality
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+### Useful resources
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+- [MDN Web Docs](https://developer.mozilla.org/) - Comprehensive documentation for web technologies
+- [CSS-Tricks](https://css-tricks.com/) - Excellent articles on CSS techniques and best practices
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs) - Detailed guide for utility-first CSS framework
+- [Frontend Mentor Community](https://www.frontendmentor.io/community) - Great place to get feedback and learn from others
 
-## Submitting your solution
+### AI Collaboration
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+I worked with AI coding assistants during this project to enhance my learning experience:
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+**Tools Used:**
+- Claude AI for code review and debugging assistance
+- AI pair programming for problem-solving and concept exploration
 
-## Sharing your solution
+**How AI Helped:**
+- **Debugging:** AI helped identify issues with CSS variable naming conventions (double dashes vs single dashes)
+- **Code Organization:** Guided me in implementing proper separation of concerns between HTML and CSS
+- **Best Practices:** Provided guidance on BEM methodology and CSS architecture
+- **Problem Solving:** Assisted with JavaScript edge cases like handling `NaN` and `Infinity` values
 
-There are multiple places you can share your solution:
+**What Worked Well:**
+- AI provided excellent explanations for concepts I was struggling with
+- Helped me think through problems rather than just giving solutions
+- Offered multiple approaches and explained the trade-offs
 
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+**Challenges:**
+- Had to be specific about what I wanted to learn vs. what I wanted automated
+- Needed to verify AI suggestions against best practices and project requirements
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+## Author
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+- Website - [Add your name here](https://www.your-site.com)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Twitter - [@yourusername](https://www.twitter.com/yourusername)
 
-## Got feedback for us?
+## Acknowledgments
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi@frontendmentor.io.
+This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+**Thank you to:**
+- Frontend Mentor for providing this excellent learning opportunity
+- The Frontend Mentor community for inspiration and feedback
+- Anyone who reviewed my code and provided helpful suggestions

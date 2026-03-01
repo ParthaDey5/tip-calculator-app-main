@@ -26,7 +26,7 @@ html{
     font-family: 'Space Mono', sans-serif;
 }
 body{
-    @apply relative col-x-center max-w-full w-screen min-h-screen lg:pt-[9rem] pt-[10rem] lg:aspect-[1440/1024] aspect-[375/933] lg:text-[0.875rem] text-[3.334rem] font-bold text-shadow-xs ;
+    @apply relative col-x-center max-w-full w-screen min-h-screen lg:pt-[9rem] pt-[10rem] lg:aspect-[1440/1024] aspect-[375/933] lg:text-[0.875rem] text-[3.334rem] font-bold text-shadow-xs bg-[var(--color-Grey-200)] ;
     
 }
 button{
@@ -50,7 +50,7 @@ input{
 
 /* Main container */
 .Tip-calculator__section__main {
-    @apply lg:w-[51rem] w-full aspect-[1440/755] lg:row-x-between lg:row-y-start col-x-center lg:rounded-[1.5rem] rounded-[6rem] lg:mt-[5rem] mt-[9rem] lg:pl-[2.6rem] lg:pr-[1.8rem] px-[5rem] bg-[var(--color-White)];
+    @apply lg:w-[51rem] w-full aspect-[1440/755] lg:row-x-between lg:row-y-start col-x-center lg:rounded-[1.5rem] rounded-[6rem] lg:mt-[5rem] mt-[9rem] lg:pl-[2.6rem] lg:pr-[1.8rem] px-[5rem] bg-[var(--color-White)] shadow-5xl ;
 }
 
 /* Input sections */

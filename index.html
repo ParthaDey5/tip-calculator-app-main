@@ -66,7 +66,7 @@
               class="Tip-calculator__section__tip__button custom"
               placeholder="Custom"
               min="0"
-              max="100"
+            
             />
           </div>
         </div>
@@ -209,7 +209,7 @@
 
         if (element.classList.contains("custom")) {
           element.addEventListener("input", (e) => {
-            const customValue = e.target.value;
+            const customValue = parseFloat(e.target.value);
             selectedTipPercent = customValue / 100;
             calculate();
           });
@@ -225,6 +225,8 @@
         document.querySelector(".custom").value = "";
         document.querySelector(".custom").classList.remove("selected");
       })
+
+      
     </script>
   </body>
 </html>

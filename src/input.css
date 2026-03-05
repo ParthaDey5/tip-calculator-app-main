@@ -5,30 +5,34 @@
 /* Global outline for debugging */
 * {
   /* outline: 1px solid red; */
+  
 }
 
 
 :root{
-    --color-Green-900:hsl(183, 100%, 15%);
-    --color-Green-150:hsl(172, 67%, 70%);
-    --color-Green-100:hsl(172, 67%, 75%);
-    --color-Green-400:hsl(172, 67%, 45%);
-    --color-Grey-500: hsl(186, 14%, 43%); 
-    --color-Grey-400:hsl(184, 14%, 56%); 
-    --color-Grey-200:hsl(185, 41%, 84%);
-    --color-Grey-50:hsl(189, 47%, 97%);
-    --color-White: hsl(0, 0%, 100%);
+    --Green-900:hsl(183, 100%, 15%);
+    --Green-150:hsl(172, 67%, 70%);
+    --Green-100:hsl(172, 67%, 75%);
+    --Green-400:hsl(172, 67%, 45%);
+    --Grey-500: hsl(186, 14%, 43%); 
+    --Grey-400:hsl(184, 14%, 56%); 
+    --Grey-200:hsl(185, 41%, 84%);
+    --Grey-50:hsl(189, 47%, 97%);
+    --White: hsl(0, 0%, 100%);
    
 }
 
 html{
     @apply text-[1.25vw];
     font-family: 'Space Mono', sans-serif;
-}
-body{
-    @apply relative col-x-center max-w-full w-screen min-h-screen lg:pt-[9rem] pt-[10rem] lg:aspect-[1440/1024] aspect-[375/933] lg:text-[0.875rem] text-[3.334rem] font-bold text-shadow-xs bg-[var(--color-Grey-200)] ;
     
 }
+body{
+    @apply relative col-x-center max-w-full w-screen min-h-screen lg:pt-[9rem] pt-[10rem] lg:aspect-[1440/1024] aspect-[375/933] lg:text-[0.875rem] text-[3.334rem] font-bold text-shadow-xs bg-[var(--Grey-200)] ;
+    
+}
+
+
 button{
     @apply cursor-custom;
 }
@@ -44,13 +48,13 @@ input[type="number"] {
 }
 
 input{
-    @apply w-full lg:px-[1rem] px-[3.5rem] lg:py-[0.2rem] py-[1rem] rounded-[0.5rem] bg-[var(--color-Grey-0)] placeholder:text-[var(--color-Grey-0)] text-right lg:text-[1.235rem] text-[5.235rem] lg:placeholder:text-[1.235rem] placeholder:text-[5.235rem] placeholder:text-[var(--color-Grey-200)] cursor-custom  placeholder:text-shadow-xs bg-[var(--color-Grey-50)] ;
+    @apply w-full lg:px-[1rem] px-[3.5rem] lg:py-[0.2rem] py-[1rem] rounded-[0.5rem] bg-[var(--Grey-0)] placeholder:text-[var(--Grey-0)] text-right lg:text-[1.235rem] text-[5.235rem] lg:placeholder:text-[1.235rem] placeholder:text-[5.235rem] placeholder:text-[var(--Grey-200)] cursor-custom  placeholder:text-shadow-xs bg-[var(--Grey-50)] ;
 }
 /* ===== COMPONENT STYLES ===== */
 
 /* Main container */
 .Tip-calculator__section__main {
-    @apply lg:w-[51rem] w-full lg:aspect-[1440/755] lg:row-x-between lg:row-y-start col-x-center lg:rounded-[1.5rem] rounded-t-[6rem] rounded-b-none lg:mt-[5rem] mt-[9rem] lg:pl-[2.6rem] lg:pr-[1.8rem] px-[5rem] bg-[var(--color-White)] shadow-5xl lg:flex-grow-0  flex-grow ;
+    @apply lg:w-[51rem] w-full lg:aspect-[1440/755] lg:row-x-between lg:row-y-start col-x-center lg:rounded-[1.5rem] rounded-t-[6rem] rounded-b-none lg:mt-[5rem] mt-[9rem] lg:pl-[2.6rem] lg:pr-[1.8rem] px-[5rem] bg-[var(--White)] shadow-5xl lg:flex-grow-0  flex-grow ;
 }
 
 /* Input sections */
@@ -72,7 +76,7 @@ input{
 
 /* Result section */
 .Tip-calculator__result {
-    @apply lg:w-[49%] w-full lg:h-[23.5rem] lg:rounded-[1.2rem] rounded-[5rem] col-x-center col-y-start lg:gap-y-0 gap-y-[5rem] lg:px-[2.1rem] px-[5.5rem] lg:mt-[1.65rem] mt-[6.6rem] bg-[var(--color-Grey-500)]  ;
+    @apply lg:w-[49%] w-full lg:h-[23.5rem] lg:rounded-[1.2rem] rounded-[5rem] col-x-center col-y-start lg:gap-y-0 gap-y-[5rem] lg:px-[2.1rem] px-[5.5rem] lg:mt-[1.65rem] mt-[6.6rem] bg-[var(--Grey-500)]  ;
 }
 
 .Tip-calculator__result__tip {
@@ -85,7 +89,7 @@ input{
 
 /* Reset button */
 .Tip-calculator__reset {
-    @apply w-full lg:py-[0.5rem] py-[2.2rem] lg:rounded-[0.3rem] rounded-[1rem] lg:mt-[7rem] mt-[3rem] mb-[5rem] lg:text-[1rem] text-[4rem] bg-[var(--color-Green-400)] hover:bg-[var(--color-Green-100)] transition-colors duration-300 ease-in;
+    @apply w-full lg:py-[0.5rem] py-[2.2rem] lg:rounded-[0.3rem] rounded-[1rem] lg:mt-[7rem] mt-[3rem] mb-[5rem] lg:text-[1rem] text-[4rem] bg-[var(--Green-400)] hover:bg-[var(--Green-100)] transition-colors duration-300 ease-in;
 }
 
 /* ===== ELEMENT STYLES ===== */
@@ -96,36 +100,36 @@ input{
 }
 
 .Tip-calculator__section__title {
-    @apply text-[var(--color-Grey-900)] lg:text-[0.875rem] text-[3.3rem];
+    @apply text-[var(--Grey-900)] lg:text-[0.875rem] text-[3.3rem];
 }
 
 .Tip-calculator__section__people__title {
-    @apply text-[var(--color-Grey-900)] lg:text-[0.875rem] text-[2.625rem];
+    @apply text-[var(--Grey-900)] lg:text-[0.875rem] text-[2.625rem];
 }
 
 .Tip-calculator__result__tip__title__header {
-    @apply whitespace-nowrap text-[var(--color-White)] lg:text-[0.875rem] text-[3.3rem];
+    @apply whitespace-nowrap text-[var(--White)] lg:text-[0.875rem] text-[3.3rem];
 }
 
 .Tip-calculator__result__tip__title__paragraph {
-    @apply w-fit text-[var(--color-Grey-400)] whitespace-nowrap ;
+    @apply w-fit text-[var(--Grey-400)] whitespace-nowrap ;
 }
 
 .Tip-calculator__result__total__header {
-    @apply text-[var(--color-White)] lg:text-[0.875rem] text-[3.3rem];
+    @apply text-[var(--White)] lg:text-[0.875rem] text-[3.3rem];
 }
 
 .Tip-calculator__result__tip__total__paragraph {
-    @apply text-[var(--color-Grey-400)] lg:text-[0.875rem] text-[2.625rem] whitespace-nowrap ;
+    @apply text-[var(--Grey-400)] lg:text-[0.875rem] text-[2.625rem] whitespace-nowrap ;
 }
 
 /* Input fields */
 input {
-    @apply w-full lg:pr-[1rem] lg:pl-[2rem] px-[3.5rem] lg:py-[0.2rem] py-[1rem] rounded-[0.5rem] bg-[var(--color-Grey-0)] placeholder:text-[var(--color-Grey-0)] text-right lg:text-[1.235rem] text-[5.235rem] lg:placeholder:text-[1.235rem] placeholder:text-[5.235rem] placeholder:text-[var(--color-Grey-200)] cursor-custom placeholder:text-shadow-xs bg-[var(--color-Grey-50)];
+    @apply w-full lg:pr-[1rem] lg:pl-[2rem] px-[3.5rem] lg:py-[0.2rem] py-[1rem] rounded-[0.5rem] bg-[var(--Grey-0)] placeholder:text-[var(--Grey-0)] text-right lg:text-[1.235rem] text-[5.235rem] lg:placeholder:text-[1.235rem] placeholder:text-[5.235rem] placeholder:text-[var(--Grey-200)] cursor-custom placeholder:text-shadow-xs bg-[var(--Grey-50)];
 }
 
 .Tip-calculator__section__bill__input {
-    @apply bg-[url(../images/icon-dollar.svg)] lg:bg-[length:0.6rem_1rem] bg-[length:2rem_4rem] bg-no-repeat bg-left lg:bg-[position:1rem_0.5rem] bg-[position:4rem_3rem];
+    @apply bg-[url(../images/icon-dollar.svg)] lg:bg-[length:0.6rem_1rem] bg-[length:2.2rem_4rem] bg-no-repeat bg-left lg:bg-[position:1rem_0.5rem] bg-[position:4rem_3rem] ;
 }
 
 .Tip-calculator__section__people__input {
@@ -141,28 +145,28 @@ input {
 }
 
 .Tip-calculator__section__tip__button {
-    @apply lg:w-[6.5rem] lg:py-[0.35rem] py-[2.35rem] bg-[var(--color-Green-900)] text-[var(--color-White)] lg:rounded-[0.3rem] rounded-[1.3rem] lg:text-[1.235rem] text-[4.375rem] hover:bg-[var(--color-Green-150)] transition-colors duration-300 ease-in;
+    @apply lg:w-[6.5rem] lg:py-[0.35rem] py-[2.35rem] bg-[var(--Green-900)] text-[var(--White)] lg:rounded-[0.3rem] rounded-[1.3rem] lg:text-[1.235rem] text-[4.375rem] hover:bg-[var(--Green-150)] transition-colors duration-300 ease-in;
 }
 
 .Tip-calculator__section__tip__button.selected {
-    @apply bg-[var(--color-Green-400)] text-[var(--color-Grey-900)];
+    @apply bg-[var(--Green-400)] text-[var(--Grey-900)];
 }
 
 .Tip-calculator__section__tip__button.custom {
-    @apply bg-[var(--color-Grey-50)] text-[var(--color-Grey-900)] placeholder:text-[var(--color-Grey-900)] lg:text-[1.235rem] text-[4.375rem] text-center ;
+    @apply bg-[var(--Grey-50)] text-[var(--Grey-900)] placeholder:text-[var(--Grey-900)] lg:text-[1.235rem] text-[4.375rem] p-0 text-center ;
 }
 
 .Tip-calculator__section__tip__button.custom:focus {
-    @apply outline-2 outline-[var(--color-Green-400)];
+    @apply outline-2 outline-[var(--Green-400)];
 }
 
 .Tip-calculator__section__tip__button.custom:focus::placeholder {
-    color: transparent;
+    color: transparent
 }
 
 /* Result displays */
 .Tip-calculator__result__tip__input, .Tip-calculator__result__total__input {
-    @apply lg:text-[2.625rem] leading-none lg:text-[2.75rem] text-[7rem] tracking-tighter text-[var(--color-Green-400)] overflow-hidden;
+    @apply lg:text-[2.625rem] leading-none lg:text-[2.75rem] text-[7rem] tracking-tighter text-[var(--Green-400)] overflow-hidden;
 }
 
 

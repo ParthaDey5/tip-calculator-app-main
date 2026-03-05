@@ -591,15 +591,15 @@ video {
 }
 
 :root{
-  --color-Green-900:hsl(183, 100%, 15%);
-  --color-Green-150:hsl(172, 67%, 70%);
-  --color-Green-100:hsl(172, 67%, 75%);
-  --color-Green-400:hsl(172, 67%, 45%);
-  --color-Grey-500: hsl(186, 14%, 43%);
-  --color-Grey-400:hsl(184, 14%, 56%);
-  --color-Grey-200:hsl(185, 41%, 84%);
-  --color-Grey-50:hsl(189, 47%, 97%);
-  --color-White: hsl(0, 0%, 100%);
+  --Green-900:hsl(183, 100%, 15%);
+  --Green-150:hsl(172, 67%, 70%);
+  --Green-100:hsl(172, 67%, 75%);
+  --Green-400:hsl(172, 67%, 45%);
+  --Grey-500: hsl(186, 14%, 43%);
+  --Grey-400:hsl(184, 14%, 56%);
+  --Grey-200:hsl(185, 41%, 84%);
+  --Grey-50:hsl(189, 47%, 97%);
+  --White: hsl(0, 0%, 100%);
 }
 
 html {
@@ -613,7 +613,7 @@ body {
   min-height: 100vh;
   width: 100vw;
   max-width: 100%;
-  background-color: var(--color-Grey-200);
+  background-color: var(--Grey-200);
   padding-top: 10rem;
   font-size: 3.334rem;
   font-weight: 700;
@@ -650,8 +650,8 @@ input {
   width: 100%;
   cursor: url('/images/icons/cursor.png'), pointer;
   border-radius: 0.5rem;
-  background-color: var(--color-Grey-0);
-  background-color: var(--color-Grey-50);
+  background-color: var(--Grey-0);
+  background-color: var(--Grey-50);
   padding-left: 3.5rem;
   padding-right: 3.5rem;
   padding-top: 1rem;
@@ -662,15 +662,15 @@ input {
 
 input::-moz-placeholder {
   font-size: 5.235rem;
-  color: var(--color-Grey-0);
-  color: var(--color-Grey-200);
+  color: var(--Grey-0);
+  color: var(--Grey-200);
   text-shadow: 0 0.05rem 0.05rem rgba(0, 0, 0, 0.2);
 }
 
 input::placeholder {
   font-size: 5.235rem;
-  color: var(--color-Grey-0);
-  color: var(--color-Grey-200);
+  color: var(--Grey-0);
+  color: var(--Grey-200);
   text-shadow: 0 0.05rem 0.05rem rgba(0, 0, 0, 0.2);
 }
 
@@ -704,7 +704,7 @@ input::placeholder {
   border-top-right-radius: 6rem;
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
-  background-color: var(--color-White);
+  background-color: var(--White);
   padding-left: 5rem;
   padding-right: 5rem;
   display: flex;
@@ -810,7 +810,7 @@ input::placeholder {
   width: 100%;
   row-gap: 5rem;
   border-radius: 5rem;
-  background-color: var(--color-Grey-500);
+  background-color: var(--Grey-500);
   padding-left: 5.5rem;
   padding-right: 5.5rem;
   justify-content: flex-start;
@@ -865,7 +865,7 @@ input::placeholder {
   margin-bottom: 5rem;
   width: 100%;
   border-radius: 1rem;
-  background-color: var(--color-Green-400);
+  background-color: var(--Green-400);
   padding-top: 2.2rem;
   padding-bottom: 2.2rem;
   font-size: 4rem;
@@ -876,7 +876,7 @@ input::placeholder {
 }
 
 .Tip-calculator__reset:hover {
-  background-color: var(--color-Green-100);
+  background-color: var(--Green-100);
 }
 
 @media (min-width: 1024px) {
@@ -905,7 +905,7 @@ input::placeholder {
 
 .Tip-calculator__section__title {
   font-size: 3.3rem;
-  color: var(--color-Grey-900);
+  color: var(--Grey-900);
 }
 
 @media (min-width: 1024px) {
@@ -916,7 +916,7 @@ input::placeholder {
 
 .Tip-calculator__section__people__title {
   font-size: 2.625rem;
-  color: var(--color-Grey-900);
+  color: var(--Grey-900);
 }
 
 @media (min-width: 1024px) {
@@ -928,7 +928,7 @@ input::placeholder {
 .Tip-calculator__result__tip__title__header {
   white-space: nowrap;
   font-size: 3.3rem;
-  color: var(--color-White);
+  color: var(--White);
 }
 
 @media (min-width: 1024px) {
@@ -941,12 +941,12 @@ input::placeholder {
   width: -moz-fit-content;
   width: fit-content;
   white-space: nowrap;
-  color: var(--color-Grey-400);
+  color: var(--Grey-400);
 }
 
 .Tip-calculator__result__total__header {
   font-size: 3.3rem;
-  color: var(--color-White);
+  color: var(--White);
 }
 
 @media (min-width: 1024px) {
@@ -958,7 +958,7 @@ input::placeholder {
 .Tip-calculator__result__tip__total__paragraph {
   white-space: nowrap;
   font-size: 2.625rem;
-  color: var(--color-Grey-400);
+  color: var(--Grey-400);
 }
 
 @media (min-width: 1024px) {
@@ -973,8 +973,8 @@ input {
   width: 100%;
   cursor: url('/images/icons/cursor.png'), pointer;
   border-radius: 0.5rem;
-  background-color: var(--color-Grey-0);
-  background-color: var(--color-Grey-50);
+  background-color: var(--Grey-0);
+  background-color: var(--Grey-50);
   padding-left: 3.5rem;
   padding-right: 3.5rem;
   padding-top: 1rem;
@@ -985,15 +985,15 @@ input {
 
 input::-moz-placeholder {
   font-size: 5.235rem;
-  color: var(--color-Grey-0);
-  color: var(--color-Grey-200);
+  color: var(--Grey-0);
+  color: var(--Grey-200);
   text-shadow: 0 0.05rem 0.05rem rgba(0, 0, 0, 0.2);
 }
 
 input::placeholder {
   font-size: 5.235rem;
-  color: var(--color-Grey-0);
-  color: var(--color-Grey-200);
+  color: var(--Grey-0);
+  color: var(--Grey-200);
   text-shadow: 0 0.05rem 0.05rem rgba(0, 0, 0, 0.2);
 }
 
@@ -1017,7 +1017,7 @@ input::placeholder {
 
 .Tip-calculator__section__bill__input {
   background-image: url(../images/icon-dollar.svg);
-  background-size: 2rem 4rem;
+  background-size: 2.2rem 4rem;
   background-position: left;
   background-position: 4rem 3rem;
   background-repeat: no-repeat;
@@ -1068,11 +1068,11 @@ input::placeholder {
 
 .Tip-calculator__section__tip__button {
   border-radius: 1.3rem;
-  background-color: var(--color-Green-900);
+  background-color: var(--Green-900);
   padding-top: 2.35rem;
   padding-bottom: 2.35rem;
   font-size: 4.375rem;
-  color: var(--color-White);
+  color: var(--White);
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
@@ -1080,7 +1080,7 @@ input::placeholder {
 }
 
 .Tip-calculator__section__tip__button:hover {
-  background-color: var(--color-Green-150);
+  background-color: var(--Green-150);
 }
 
 @media (min-width: 1024px) {
@@ -1094,23 +1094,24 @@ input::placeholder {
 }
 
 .Tip-calculator__section__tip__button.selected {
-  background-color: var(--color-Green-400);
-  color: var(--color-Grey-900);
+  background-color: var(--Green-400);
+  color: var(--Grey-900);
 }
 
 .Tip-calculator__section__tip__button.custom {
-  background-color: var(--color-Grey-50);
+  background-color: var(--Grey-50);
+  padding: 0px;
   text-align: center;
   font-size: 4.375rem;
-  color: var(--color-Grey-900);
+  color: var(--Grey-900);
 }
 
 .Tip-calculator__section__tip__button.custom::-moz-placeholder {
-  color: var(--color-Grey-900);
+  color: var(--Grey-900);
 }
 
 .Tip-calculator__section__tip__button.custom::placeholder {
-  color: var(--color-Grey-900);
+  color: var(--Grey-900);
 }
 
 @media (min-width: 1024px) {
@@ -1121,15 +1122,15 @@ input::placeholder {
 
 .Tip-calculator__section__tip__button.custom:focus {
   outline-width: 2px;
-  outline-color: var(--color-Green-400);
+  outline-color: var(--Green-400);
 }
 
 .Tip-calculator__section__tip__button.custom:focus::-moz-placeholder {
-  color: transparent;
+  color: transparent
 }
 
 .Tip-calculator__section__tip__button.custom:focus::placeholder {
-  color: transparent;
+  color: transparent
 }
 
 /* Result displays */
@@ -1139,7 +1140,7 @@ input::placeholder {
   font-size: 7rem;
   line-height: 1;
   letter-spacing: -0.05em;
-  color: var(--color-Green-400);
+  color: var(--Green-400);
 }
 
 @media (min-width: 1024px) {

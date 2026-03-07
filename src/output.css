@@ -1019,14 +1019,14 @@ input::placeholder {
   background-image: url(../images/icon-dollar.svg);
   background-size: 2.2rem 4rem;
   background-position: left;
-  background-position: 4rem 3rem;
+  background-position: left 4rem top 3rem;
   background-repeat: no-repeat;
 }
 
 @media (min-width: 1024px) {
   .Tip-calculator__section__bill__input {
     background-size: 0.6rem 1rem;
-    background-position: 1rem 0.5rem;
+    background-position: left 1rem top 0.5rem;
   }
 }
 
@@ -1034,14 +1034,14 @@ input::placeholder {
   background-image: url(../images/icon-person.svg);
   background-size: 3rem 4rem;
   background-position: left;
-  background-position: 3.5rem 3rem;
+  background-position: left 3.5rem top 3rem;
   background-repeat: no-repeat;
 }
 
 @media (min-width: 1024px) {
   .Tip-calculator__section__people__input {
     background-size: 0.8rem 1rem;
-    background-position: 1rem 0.6rem;
+    background-position: left 1rem top 0.6rem;
   }
 }
 
